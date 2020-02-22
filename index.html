@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDo List App</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="no_boot_styles.css">
+    <link rel="stylesheet"
+        href="'https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,500,700|Montserrat:400,600,700&display=swap'">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/202238c551.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="card">
+        <section class="card-header">
+            <h1 class="card-header__title">ToDoIt!</h1>
+            <p class="card-header__date">01.01.01</p>
+            <p class="card-header__motivation">Today is a gift!</p>
+            <div class="card-header__progress progress">
+                <div class="progress-bar" style="width:50%" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                    aria-valuemax="100">
+                    <span class="progress-value">50%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-categories">
+            <div class="card-categories__pending">
+                <button class="btn btn-outline-primary btn-lg btn-block" data-expand-btn>Pending
+                    <i class="fas fa-plus"></i>
+                </button>
+                <ul data-list-pending></ul>
+            </div>
+
+            <div class="card-categories__completed">
+                <button class="btn btn-outline-primary btn-lg btn-block" data-expand-btn>Completed
+                    <i class="fas fa-plus"></i>
+                </button>
+                <ul data-list-completed></ul>
+            </div>
+
+            <div class="card-categories__overdue">
+                <button class="btn btn-outline-primary btn-lg btn-block" data-expand-btn>Overdue
+                    <i class="fas fa-plus"></i>
+                </button>
+                <ul data-list-overdue></ul>
+            </div>
+        </section>
+
+        <section class="input-group">
+            <input id="task" type="text" class="form-control input-group__text" placeholder="Enter Task Here" required>
+            <div class="input-group-append">
+                <button class="btn btn-primary input-group__btn" type="button" id="add-btn">Add Task</button>
+            </div>
+        </section>
+
+        <section class="card-buttons">
+            <button class="btn btn-info"><i class="fas fa-undo"></i></button>
+            <button class="btn btn-success"><i class="fas fa-redo"></i></button>
+            <button class="btn btn-secondary"><i class="fas fa-broom"></i></button>
+        </section>
+    </div>
+    </div>
+
+</body>
+
+</html>
